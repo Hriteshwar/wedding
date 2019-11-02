@@ -1,769 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Hriteshwar&Mouli</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Animated landing page">
-    <meta name="keywords" content="Landing page">
-    <meta name="author" content="Ahmedur Rahman Shovon">
-    <title>Coming Soon</title>
-    <link rel="icon" href="coming_soon_assets/images/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="coming_soon_assets/images/favicon.ico" type="image/x-icon"/>
-    <style>
-        html,
-        body {
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        body {
-            background: #09f;
-            background-image: linear-gradient(to top, #0099ff, #45d1ff);
-        }
-        /* Rocks */
-        
-        .ground {
-            background-color: #B19975;
-            border-bottom: 20px solid #655848;
-            height: 50px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            z-index: 25;
-            left: -1px;
-            box-shadow: 0 13px 19px #3A251D inset;
-        }
-        
-        .rock1 {
-            background-color: #956F53;
-            border-radius: 120px 20px 20px 20px;
-            height: 115px;
-            left: 75%;
-            position: fixed;
-            bottom: 3%;
-            width: 138px;
-            box-shadow: 3px -6px 2px #292828 inset, -13px -34px 49px #292828 inset;
-            z-index: 30;
-        }
-        
-        .rock2 {
-            border: 1px solid #252424;
-            background-color: #604F46;
-            border-radius: 57px 84px 13px 13px;
-            height: 115px;
-            left: 85%;
-            position: fixed;
-            bottom: 4%;
-            width: 128px;
-            box-shadow: 11px 14px 23px #171717, -83px -37px 25px #292828 inset;
-            z-index: 30;
-        }
-        
-        .rock2:after {
-            background-color: #604F46;
-            border-radius: 57px 0 57px 0;
-            box-shadow: - #171717, #292828 inset;
-            content: "";
-            height: 60px;
-            left: 34px;
-            position: absolute;
-            top: 51px;
-            width: 165px;
-            border: 1px solid #252424;
-        }
-        
-        .rock3 {
-            border: 1px solid #252424;
-            background-color: #956F53;
-            border-radius: height: 52px;
-            left: 615px;
-            position: fixed;
-            bottom: 4%;
-            width: 97px;
-            z-index: 50;
-            box-shadow: 1px -2px 8px #171717, 1px -18px 18px #292828 inset;
-        }
-        
-        .rock3:before {
-            border: 1px solid #252424;
-            transform: rotate(186deg);
-            background-color: #A37F64;
-            border-radius: 121px 20px 137px 51px;
-            content: "";
-            height: 41px;
-            left: -50px;
-            position: absolute;
-            top: 9px;
-            width: 80px;
-            box-shadow: -1px 4px 8px #171717, 4px 3px 18px #292828 inset;
-        }
-        
-        .rock3:after {
-            border: 1px solid #252424;
-            background-color: #78604E;
-            border-radius: 60px 80px 30px 40px;
-            content: "";
-            box-shadow: -4px 3px 6px #171717, 10px -7px 17px #292828 inset;
-            transform: skewX(22deg) skewY(-5deg);
-            height: 48px;
-            left: 70px;
-            position: absolute;
-            top: -12px;
-            width: 120px;
-        }
-        
-        .rock4 {
-            transform: rotate(19deg);
-            background-color: #956F53;
-            border-radius: 121px 19px 50px 18px;
-            box-shadow: 1px 4px 8px #171717, -6px -8px 12px #292828 inset;
-            height: 252px;
-            left: 37px;
-            position: fixed;
-            bottom: 4%;
-            width: 107px;
-            border: 1px solid #252424;
-            z-index: 100;
-        }
-        
-        .rock4:before {
-            transform: rotate(89deg);
-            background-color: #A37F64;
-            border-radius: 191px 106px 137px 1px;
-            box-shadow: 6px -27px 23px #473827 inset;
-            content: "";
-            height: 44px;
-            left: 7px;
-            position: absolute;
-            top: 91px;
-            width: 228px;
-            border: 1px solid #252424;
-        }
-        
-        .rock4:after {
-            background-color: #78604E;
-            border-radius: 121px 20px 137px 51px;
-            box-shadow: 5px 1px 4px #171717, -8px -7px 18px #292828 inset;
-            content: "";
-            height: 63px;
-            left: 232px;
-            position: absolute;
-            top: 128px;
-            width: 87px;
-            border: 1px solid #252424;
-        }
-        
-        .rock5 {
-            border: 1px solid #252424;
-            transform: rotate(52deg) skewX(-3deg);
-            background-color: #956F53;
-            border-radius: 121px 20px 137px 51px;
-            box-shadow: 3px 2px 7px #171717, -14px -18px 30px #292828 inset;
-            height: 84px;
-            left: 95px;
-            position: fixed;
-            bottom: 3%;
-            width: 77px;
-            z-index: 100;
-        }
-        
-        .rock5:before {
-            transform: rotate(217deg);
-            background-color: #A37F64;
-            border: 1px solid #252424;
-            border-radius: 21px 20px 117px 51px;
-            box-shadow: -8px 1px 8px #212020, 5px -2px 15px #292828 inset;
-            content: "";
-            height: 144px;
-            left: -40px;
-            position: absolute;
-            top: 5px;
-            width: 82px;
-        }
-        
-        .rock5:after {
-            transform: skewX(-6deg) rotate(114deg);
-            background-color: #78604E;
-            border: 1px solid #252424;
-            border-radius: 40px 102px 104px 109px;
-            box-shadow: 2px -1px 7px #171717, -5px 10px 20px #292828 inset;
-            content: "";
-            height: 57px;
-            left: 91px;
-            position: absolute;
-            top: -147px;
-            width: 125px;
-        }
-        
-        .rock6 {
-            border: 1px solid #252424;
-            transform: rotate(52deg) skewX(-3deg);
-            background-color: #B49F9F;
-            border-radius: 121px 20px 137px 51px;
-            box-shadow: 3px 2px 7px #171717, -14px -18px 30px #292828 inset;
-            height: 84px;
-            left: 60%;
-            position: fixed;
-            bottom: 2%;
-            width: 77px;
-            z-index: 100;
-        }
-        
-        .rock6:before {
-            transform: rotate(37deg);
-            background-color: #A37F64;
-            border: 1px solid #252424;
-            border-radius: 21px 20px 17px 51px;
-            box-shadow: -8px 1px 8px #212020, 5px -2px 15px #292828 inset;
-            content: "";
-            height: 344px;
-            left: -130px;
-            position: absolute;
-            top: 75px;
-            width: 42px;
-        }
-        
-        .rock6:after {
-            transform: skewX(-6deg) rotate(24deg);
-            background-color: #78604E;
-            border: 1px solid #252424;
-            border-radius: 40px 104px 102px 109px;
-            box-shadow: 2px -1px 7px #171717, -5px 10px 20px #292828 inset;
-            content: "";
-            height: 87px;
-            left: 35px;
-            position: absolute;
-            top: -190px;
-            width: 170px;
-        }
-        /*plants*/
-        
-        .plant1wrap {
-            position: fixed;
-            bottom: 10%;
-            width: 10%;
-            height: 300px;
-            left: 38%;
-            z-index: 5;
-        }
-        
-        .plant1 {
-            z-index: 100;
-            transform: rotate(-15deg);
-            background-color: #3D8F39;
-            border: 1px solid #252424;
-            border-radius: 260px 30px 260px 17px;
-            box-shadow: -4px -5px 8px #292828 inset;
-            height: 224px;
-            left: -20px;
-            position: absolute;
-            top: 150px;
-            width: 43px;
-        }
-        
-        .plant1:after {
-            border: 1px solid #252424;
-            box-shadow: 0 10px 11px #292828;
-            content: "";
-            height: 279px;
-            left: 10px;
-            position: absolute;
-            top: 19px;
-            width: 2px;
-        }
-        
-        .plant2 {
-            background-color: #33852F;
-            border: 1px solid #252424;
-            border-radius: 260px 30px 260px 17px;
-            box-shadow: -4px -5px 8px #292828 inset;
-            height: 276px;
-            left: 42px;
-            position: absolute;
-            top: 79px;
-            width: 51px;
-        }
-        
-        .plant2:after {
-            border: 1px solid #252424;
-            box-shadow: 0 10px 11px #292828;
-            content: "";
-            height: 235px;
-            left: 29px;
-            position: absolute;
-            top: 19px;
-            width: 2px;
-        }
-        
-        .plant3 {
-            background-color: #33852F;
-            border: 1px solid #252424;
-            border-radius: 260px 30px 260px 17px;
-            box-shadow: -4px -5px 8px #292828 inset;
-            height: 253px;
-            left: 9px;
-            position: absolute;
-            top: 203px;
-            width: 39px;
-        }
-        
-        .plant3:after {
-            border: 1px solid #252424;
-            box-shadow: 0 10px 11px #292828;
-            content: "";
-            height: 112px;
-            left: 14px;
-            position: absolute;
-            top: 19px;
-            width: 2px;
-        }
-        
-        .plant2wrap {
-            position: fixed;
-            bottom: 2%;
-            width: 10%;
-            height: 400px;
-            left: 90%;
-            z-index: 10;
-        }
-        
-        .plant4 {
-            background-color: #33852F;
-            border: 1px solid #252424;
-            border-radius: 260px 30px 260px 17px;
-            box-shadow: -4px -5px 8px #292828 inset;
-            height: 135px;
-            left: -9px;
-            position: absolute;
-            top: 180px;
-            width: 39px;
-        }
-        
-        .plant4:after {
-            border: 1px solid #252424;
-            box-shadow: 0 10px 11px #292828;
-            content: "";
-            height: 112px;
-            left: 14px;
-            position: absolute;
-            top: 19px;
-            width: 2px;
-        }
-        
-        .plant5 {
-            background-color: #33852F;
-            border: 1px solid #252424;
-            border-radius: 260px 30px 260px 17px;
-            box-shadow: -4px -5px 8px #292828 inset;
-            height: 135px;
-            left: 39px;
-            position: absolute;
-            top: 220px;
-            width: 39px;
-        }
-        
-        .plant5:after {
-            border: 1px solid #252424;
-            box-shadow: 0 10px 11px #292828;
-            content: "";
-            height: 112px;
-            left: 14px;
-            position: absolute;
-            top: 19px;
-            width: 2px;
-        }
-        
-        .plant2 {
-            transform-origin: center bottom;
-        }
-        
-        .plant3 {
-            transform-origin: center bottom;
-        }
-        
-        .plant4 {
-            left: -6px;
-            top: 190px;
-            transform-origin: center bottom;
-        }
-        
-        .plant5 {
-            left: 40px;
-            top: 200px;
-            transform-origin: center bottom;
-        }
-        /* fish */
-        
-        .fish1 {
-            height: 230px;
-            max-width: 400px;
-            position: absolute;
-            top: 55%;
-            width: 290px;
-            left: 200px;
-            z-index: 100;
-        }
-        
-        .fish2 {
-            height: 230px;
-            left: 200px;
-            position: absolute;
-            top: 65%;
-            width: 290px;
-            z-index: 100;
-        }
-        
-        header,
-        #header {
-            padding: 10px 0;
-        }
-        /* bubbles */
-        
-        .bubblewrap {
-            height: 500px;
-            left: 470px;
-            position: absolute;
-            bottom: 0px;
-            width: 200px;
-        }
-        
-        .bubbles {
-            background-color: rgba(255, 255, 255, 0.16);
-            border: 1px solid #585858;
-            border-radius: 100px 100px 100px 100px;
-            height: 20px;
-            left: 33px;
-            position: absolute;
-            bottom: 0px;
-            width: 20px;
-            overflow: hidden;
-            margin: 0 auto;
-        }
-        
-        .b3 {
-            left: 50px;
-            bottom: 0px;
-        }
-        
-        .b4 {
-            left: 60px;
-            bottom: 0px;
-        }
-        
-        .b5 {
-            left: 80px;
-            bottom: 0px;
-        }
-        
-        .b6 {
-            left: 90px;
-            bottom: 0px;
-        }
-        
-        .fish1 {
-            animation: fish1-swim 30s infinite linear;
-        }
-        
-        @keyframes fish1-swim {
-            from {
-                left: 50%;
-            }
-            20% {
-                left: 0;
-                transform: scaleX(1);
-            }
-            20.5% {
-                transform: scaleX(-1);
-                left: -30px;
-            }
-            50% {
-                top: 30%;
-                left: 70%;
-                transform: scaleX(-1);
-            }
-            50.5% {
-                transform: scaleX(1);
-                left: 75%;
-                top: 40%;
-            }
-            70% {
-                top: 15%;
-                left: -30px;
-                transform: scaleX(1);
-            }
-            70.5% {
-                transform: scaleX(-1);
-                left: -30px;
-            }
-            80% {
-                left: 65%;
-                top: 45%;
-            }
-            82% {
-                left: 76%;
-                transform: scaleX(-1);
-            }
-            82.5% {
-                transform: scaleX(1);
-                top: 45%;
-                left: 77%;
-            }
-            84% {
-                top: 50%;
-                left: 70%;
-            }
-            88% {
-                top: 60%;
-                left: 75%;
-            }
-            to {
-                left: 80%;
-            }
-        }
-        
-        .fish2 {
-            animation: fish2-swim 40s infinite linear;
-        }
-        
-        @keyframes fish2-swim {
-            from {
-                left: 45%;
-            }
-            20% {
-                left: 0;
-                transform: scaleX(1);
-            }
-            20.5% {
-                transform: scaleX(-1);
-                left: -30px;
-            }
-            50% {
-                top: 75%;
-                left: 75%;
-                transform: scaleX(-1);
-            }
-            50.5% {
-                transform: scaleX(1);
-                left: 75%;
-                top: 60%;
-            }
-            69% {
-                left: -30px;
-            }
-            70% {
-                top: 35%;
-                left: -30px;
-                transform: scaleX(1);
-            }
-            70.5% {
-                transform: scaleX(-1);
-                left: -30px;
-            }
-            81% {
-                left: 65%;
-                top: 70%;
-            }
-            82% {
-                left: 70%;
-                transform: scaleX(-1);
-            }
-            82.5% {
-                transform: scaleX(1);
-                top: 72%;
-                left: 68%;
-            }
-            84% {
-                top: 65%;
-                left: 70%;
-            }
-            88% {
-                top: 70%;
-                left: 75%;
-            }
-            to {
-                left: 45%;
-            }
-        }
-        
-        .b1 {
-            animation: bubblerise 4s 2s linear infinite;
-        }
-        
-        .b2 {
-            animation: bubblerise 7s linear infinite
-        }
-        
-        .b3 {
-            animation: bubblerise 4s linear 1s infinite
-        }
-        
-        .b4 {
-            animation: bubblerise 5s linear 3s infinite
-        }
-        
-        .b5 {
-            animation: bubblerise 6s linear infinite
-        }
-        
-        .b6 {
-            animation: bubblerise 5s linear infinite
-        }
-        
-        @keyframes bubblerise {
-            from {
-                top: 380px;
-            }
-            to {
-                top: 0px;
-            }
-        }
-        
-        .plant1 {
-            animation: plant1-sway 15s infinite ease;
-        }
-        
-        @keyframes plant1-sway {
-            from {
-                transform: rotate(-7deg);
-            }
-            50% {
-                transform: rotate(13deg);
-            }
-            to {
-                transform: rotate(-7deg);
-            }
-        }
-        
-        .plant2 {
-            animation: plant2-sway 15s infinite ease;
-        }
-        
-        @keyframes plant2-sway {
-            from {
-                transform: rotate(-7deg);
-            }
-            50% {
-                transform: rotate(13deg);
-            }
-            to {
-                transform: rotate(-7deg);
-            }
-        }
-        
-        .plant3 {
-            animation: plant3-sway 16s infinite ease;
-        }
-        
-        @keyframes plant3-sway {
-            from {
-                transform: rotate(-5deg);
-            }
-            50% {
-                transform: rotate(12deg);
-            }
-            to {
-                transform: rotate(-5deg);
-            }
-        }
-        
-        .plant4 {
-            animation: plant4-sway 14.98s infinite ease;
-        }
-        
-        @keyframes plant4-sway {
-            from {
-                transform: rotate(-10deg);
-            }
-            45% {
-                transform: rotate(-16deg);
-            }
-            50% {
-                transform: rotate(-2deg);
-            }
-            to {
-                transform: rotate(-10deg);
-            }
-        }
-        
-        .plant5 {
-            animation: plant5-sway 14.98s infinite ease;
-        }
-        
-        @keyframes plant5-sway {
-            from {
-                transform: rotate(5deg);
-            }
-            45% {
-                transform: rotate(8deg);
-            }
-            50% {
-                transform: rotate(20deg);
-            }
-            to {
-                transform: rotate(5deg);
-            }
-        }
-    </style>
-    <script>
-        window.console = window.console || function(t) {};
-    </script>
-    <script>
-        if (document.location.search.match(/type=embed/gi)) {
-            window.parent.postMessage("resize", "*");
-        }
-    </script>
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
 
-<body translate="no">
-    <header align="center">
-        <h3>Page is underwater!</h3>
-	<p>Wait for few days to get up</p>
-        <br>
-    </header>
-    <div class="ground">
-    </div>
-    <div class="rock1">
-    </div>
-    <div class="rock2">
-    </div>
-    <div class="rock3">
-    </div>
-    <div class="rock4">
-    </div>
-    <div class="rock5">
-    </div>
-    <div class="rock6">
-    </div>
-    <div class="rock7">
-    </div>
-    <div class="plant1wrap">
-        <div class="plant1">
-        </div>
-        <div class="plant2">
-        </div>
-        <div class="plant3">
-        </div>
-    </div>
-    <div class="plant2wrap">
-        <div class="plant4">
-        </div>
-        <div class="plant5">
-        </div>
-    </div>
-    <div class="bubblewrap">
-        <div class="bubbles b1"></div>
-        <div class="bubbles b2"></div>
-        <div class="bubbles b3"></div>
-        <div class="bubbles b4"></div>
-        <div class="bubbles b5"></div>
-        <div class="bubbles b6"></div>
-    </div>
-    <div class="fish1">
-        <img src="coming_soon_assets/images/fish1.png" alt="Fish 1"></div>
-    <div class="fish2">
-        <img src="coming_soon_assets/images/fish-icon.png" alt="Fish 2">
-    </div>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-</body>
+    <link rel="stylesheet" href="css/aos.css">
 
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">HriteshwarMouli</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#groom-bride-section" class="nav-link"><span>Groom &amp; Bride</span></a></li>
+	          <li class="nav-item"><a href="#lovestory-section" class="nav-link"><span>Love Story</span></a></li>
+	          <li class="nav-item"><a href="#greeting-section" class="nav-link"><span>Greetings</span></a></li>
+	          <li class="nav-item"><a href="#people-section" class="nav-link"><span>People</span></a></li>
+	          <li class="nav-item"><a href="#when-where-section" class="nav-link"><span>When &amp; Where</span></a></li>
+	          <li class="nav-item"><a href="#gallery-section" class="nav-link"><span>Gallery</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+	  <section id="home" class="video-hero js-fullheight" style="height: 700px; background-image: url(images/bg_1.jpg); background-size:cover; background-position: top center;" data-stellar-background-ratio="0.5">
+	  	<div class="overlay"></div>
+			<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=Mjjw19B7rMk',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default',optimizeDisplay:true}"></a>
+			<div class="container">
+				<div class="row js-fullheight justify-content-center d-flex align-items-center">
+					<div class="col-md-12">
+						<div class="text text-center">
+							<div class="icon">
+								<span class="flaticon-rose-outline-variant-with-vines-and-leaves"></span>
+							</div>
+							<span class="subheading">The Wedding of</span>
+							<h1>Hriteshwar &amp; Mouli</h1>
+							<div id="timer" class="d-flex">
+							  <div class="time" id="days"></div>
+							  <div class="time pl-3" id="hours"></div>
+							  <div class="time pl-3" id="minutes"></div>
+							  <div class="time pl-3" id="seconds"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section ftco-about ftco-no-pt ftco-no-pb" id="groom-bride-section">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-12">
+    				<div class="wrap">
+			    		<div class="row d-flex">
+			    			<div class="col-md-6 d-flex">
+			    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/couple_2.jpg);">
+			    				</div>
+			    			</div>
+			    			<div class="col-md-6 py-md-5 text">
+			    				<div class="py-md-4">
+				    				<div class="row justify-content-start pb-3">
+						          <div class="col-md-12 ftco-animate p-4 p-lg-5 text-center">
+						          	<span class="subheading mb-4">Join us to celebrate <br>the ceremony of</span>
+						            <h2 class="mb-4">Hriteshwar <span>&amp;</span> Mouli</h2>
+						            <span class="icon flaticon-rose-variant-outline-with-vines"></span>
+						            <span class="subheading">Which is celebration on</span>
+						           	<p class="time mb-4"><span>Dec | 14 | 2019</span></p>
+						           	<span class="subheading mb-5">Starting at 7:30PM <br> in the evening</span>
+						           	<span class="subheading mb-5">Amani Community Centre <br> at Pathantula, Sylhet</span>
+						          </div>
+						        </div>
+					        </div>
+				        </div>
+			        </div>
+			      </div>
+		      </div>
+		    </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-section">
+    	<div class="overlay-top" style="background-image: url(images/top-bg.jpg);"></div>
+    	<div class="overlay-bottom" style="background-image: url(images/bottom-bg.jpg);"></div>
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 text-center heading-section ftco-animate">
+          	<span class="clone">Bride &amp; Groom</span>
+            <h2 class="mb-3">Bride &amp; Groom</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+        	<div class="col-md-10">
+        		<div class="row">
+		        	<div class="col-md-6 text-center d-flex align-items-stretch">
+		        		<div class="bride-groom ftco-animate">
+		        			<div class="img" style="background-image: url(images/hrite.jpg);"></div>
+		        			<div class="text mt-4 px-4">
+		        				<h2>Hriteshwar Talukder</h2>
+		        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+		        			</div>
+		        		</div>
+		        	</div>
+		        	<div class="col-md-6 text-center d-flex align-items-stretch">
+		        		<div class="bride-groom ftco-animate">
+		        			<div class="img" style="background-image: url(images/mouli.jpg);"></div>
+		        			<div class="text mt-4 px-4">
+		        				<h2>Moumita Mouli</h2>
+		        				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+		        			</div>
+		        		</div>
+		        	</div>
+		        </div>
+		      </div>
+        </div>
+    	</div>
+    </section>
+
+   	<section class="ftco-section" id="lovestory-section">
+   		<div class="container">
+   			<div class="row justify-content-center pb-5">
+          <div class="col-md-12 text-center heading-section ftco-animate">
+          	<span class="clone">Love Story</span>
+            <h2 class="mb-3">Love Story</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+        		<ul class="timeline animate-box">
+							<li class="animate-box">
+								<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+								<div class="timeline-panel ftco-animate text-md-right">
+									<div class="overlay"></div>
+									<div class="timeline-heading">
+										<span class="date">June 10, 2017</span>
+										<h3 class="timeline-title">First We Meet</h3>
+									</div>
+									<div class="timeline-body">
+										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
+								<div class="timeline-panel ftco-animate">
+									<div class="overlay overlay-2"></div>
+									<div class="timeline-heading">
+										<span class="date">June 10, 2017</span>
+										<h3 class="timeline-title">First Date</h3>
+									</div>
+									<div class="timeline-body">
+										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
+									</div>
+								</div>
+							</li>
+							<li class="animate-box">
+								<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
+								<div class="timeline-panel ftco-animate text-md-right">
+									<div class="overlay"></div>
+									<div class="timeline-heading">
+										<span class="date">June 14, 2017</span>
+										<h3 class="timeline-title">In A Relationship</h3>
+									</div>
+									<div class="timeline-body">
+										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge" style="background-image:url(images/couple-4.jpg);"></div>
+								<div class="timeline-panel ftco-animate">
+									<div class="overlay overlay-2"></div>
+									<div class="timeline-heading">
+										<span class="date">May. 10, 2019</span>
+										<h3 class="timeline-title">We're Engaged</h3>
+									</div>
+									<div class="timeline-body">
+										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
+									</div>
+								</div>
+							</li>
+			    	</ul>
+        	</div>
+        </div>
+   		</div>
+   	</section>
+
+   	<section class="ftco-section bg-light" id="greeting-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 text-center heading-section ftco-animate">
+          	<span class="clone">Testimony</span>
+            <h2 class="mb-3">Sweet Messages</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section" id="people-section">
+    	<div class="container-fluid px-md-5">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 text-center heading-section ftco-animate">
+          	<span class="clone">People</span>
+            <h2 class="mb-3">Family &amp; Friends</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-12">
+        		<div class="carousel-friends owl-carousel ftco-owl ftco-animate">
+        			<div class="item">
+                <div class="people text-center">
+		        			<div class="img" style="background-image: url(images/groom-men-1.jpg);"></div>
+		        			<div class="text">
+		        				<h3>Mark Tomy</h3>
+		        				<span>Groomsmen</span>
+		        			</div>
+		        		</div>
+              </div>
+              <div class="item">
+                <div class="people text-center">
+		        			<div class="img" style="background-image: url(images/groom-men-2.jpg);"></div>
+		        			<div class="text">
+		        				<h3>John Henceworth</h3>
+		        				<span>Groomsmen</span>
+		        			</div>
+		        		</div>
+              </div>
+              <div class="item">
+                <div class="people text-center">
+		        			<div class="img" style="background-image: url(images/groom-men-3.jpg);"></div>
+		        			<div class="text">
+		        				<h3>Rey Cooper</h3>
+		        				<span>Groomsmen</span>
+		        			</div>
+		        		</div>
+              </div>
+              <div class="item">
+                <div class="people text-center">
+		        			<div class="img" style="background-image: url(images/groom-men-4.jpg);"></div>
+		        			<div class="text">
+		        				<h3>Robert Chan</h3>
+		        				<span>Groomsmen</span>
+		        			</div>
+		        		</div>
+              </div>
+              <div class="item">
+                <div class="people text-center">
+		        			<div class="img" style="background-image: url(images/bridesmaid-1.jpg);"></div>
+		        			<div class="text">
+		        				<h3>Rose Jones</h3>
+		        				<span>Bridesmaid</span>
+		        			</div>
+		        		</div>
+              </div>
+              <div class="item">
+                <div class="people text-center">
+		        			<div class="img" style="background-image: url(images/bridesmaid-2.jpg);"></div>
+		        			<div class="text">
+		        				<h3>Mary Dell</h3>
+		        				<span>Bridesmaid</span>
+		        			</div>
+		        		</div>
+              </div>
+              <div class="item">
+                <div class="people text-center">
+		        			<div class="img" style="background-image: url(images/bridesmaid-3.jpg);"></div>
+		        			<div class="text">
+		        				<h3>Alicia Brean</h3>
+		        				<span>Bridesmaid</span>
+		        			</div>
+		        		</div>
+              </div>
+              <div class="item">
+                <div class="people text-center">
+		        			<div class="img" style="background-image: url(images/bridesmaid-4.jpg);"></div>
+		        			<div class="text">
+		        				<h3>Angel Worth</h3>
+		        				<span>Bridesmaid</span>
+		        			</div>
+		        		</div>
+              </div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-light" id="when-where-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 text-center heading-section ftco-animate">
+          	<span class="clone">Place</span>
+            <h2 class="mb-3">Place &amp; Time</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-4 ftco-animate">
+        		<div class="place img" style="background-image: url(images/place-1.jpg);">
+        			<div class="text text-center">
+	        			<span class="icon flaticon-reception-bell"></span>
+	        			<h3>The Reception</h3>
+	        			<p><span>Saturday, 28, 2019</span><br><span>02:00 pm-10:00 pm</span></p>
+	        			<p><span>203 Fake St. Mountain View, San Francisco, California, USA</span></p>
+	        			<p><a href="#">+0 (123) 456 78 910</a></p>
+	        			<p><a href="#" class="btn-custom">See Map</a></p>
+	        		</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4 ftco-animate">
+        		<div class="place img" style="background-image: url(images/place-2.jpg);">
+        			<div class="text text-center">
+	        			<span class="icon flaticon-wedding-kiss"></span>
+	        			<h3>The Ceremony</h3>
+	        			<p><span>Saturday, 28, 2019</span><br><span>02:00 pm-10:00 pm</span></p>
+	        			<p><span>203 Fake St. Mountain View, San Francisco, California, USA</span></p>
+	        			<p><a href="#">+0 (123) 456 78 910</a></p>
+	        			<p><a href="#" class="btn-custom">See Map</a></p>
+	        		</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4 ftco-animate">
+        		<div class="place img" style="background-image: url(images/place-3.jpg);">
+        			<div class="text text-center">
+	        			<span class="icon flaticon-cake"></span>
+	        			<h3>The Party</h3>
+	        			<p><span>Saturday, 28, 2019</span><br><span>02:00 pm-10:00 pm</span></p>
+	        			<p><span>203 Fake St. Mountain View, San Francisco, California, USA</span></p>
+	        			<p><a href="#">+0 (123) 456 78 910</a></p>
+	        			<p><a href="#" class="btn-custom">See Map</a></p>
+	        		</div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+
+    <section class="ftco-section" id="gallery-section">
+    	<div class="container-fluid px-md-4">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 text-center heading-section ftco-animate">
+          	<span class="clone">Photos</span>
+            <h2 class="mb-3">Gallery</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-3 ftco-animate">
+        		<a href="images/couple_1.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/couple_1.jpg);">
+        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+        		</a>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<a href="images/couple_2.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/couple_2.jpg);">
+        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+        		</a>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<a href="images/couple_3.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/couple_3.jpg);">
+        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+        		</a>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<a href="images/gallery-4.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-4.jpg);">
+        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+        		</a>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<a href="images/gallery-5.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-5.jpg);">
+        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+        		</a>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<a href="images/gallery-6.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-6.jpg);">
+        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+        		</a>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<a href="images/gallery-7.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-7.jpg);">
+        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+        		</a>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<a href="images/gallery-8.jpg" class="gallery img image-popup d-flex align-items-center justify-content-center" style="background-image: url(images/gallery-8.jpg);">
+        			<div class="icon d-flex align-items-center justify-content-center"><span class="ion-ios-image"></span></div>
+        		</a>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+  	<footer class="ftco-footer ftco-section">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Hriteshwar&Mouli</h2>
+              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <ul class="ftco-footer-social list-unstyled mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">4th Floor, 324, North Bagbari, Sylhet</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+01745311342</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">hriteshwar@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Developed with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://arshovon.com" target="_blank">Shovon</a>,
+  Template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+
+  <script src="js/main.js"></script>
+  </body>
+  <script src="js/arsho.js"></script>
 </html>
